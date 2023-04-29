@@ -1,6 +1,66 @@
 #terminal-container {
     position: absolute;
     width: 100vw;
-    height: 20vh;
-    margin-top: 80vh;
+    height: 80vh;
+    margin-top: 20vh;
+}
+
+#terminal-readout {
+    width: 60%;
+    margin-left: 18%;
+    height: 85%;
+    padding: 5px;
+    padding-left: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(255, 192, 203, 0) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: Chicago, sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    text-align: left;
+}
+
+.computer {
+    color: #1FC742;
+}
+.hacker {
+    color: #025B18;
+}
+
+#user-input {
+    width: 60%;
+    height: 50px;
+    margin-left: 18%;
+    padding: 5px;
+    padding-left: 30px;
+    background-color: black;
+    color: #1FC742;
+}
+
+#user-input input {
+    width: 80%;
+    height: 30px;
+    float: left;
+    padding-bottom: 2px;
+    border: 3px solid #1FC742;
+    background-color: black;
+    color: #1FC742;
+    font-family: Chicago, sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+#user-input input:focus {
+    outline: none;
+    border-color: #1FC742;
+    box-shadow: 0 0 5px #1FC742;
+}
+
+button {
+    background-color: #1FC742;
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
 }

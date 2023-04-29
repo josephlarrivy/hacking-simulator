@@ -19,7 +19,7 @@ function App() {
   const animate = () => {
     setAnimationPhase(animationPhase+1)
     if (animationPhase === 0) {
-      setFrontAnimation('front-pop-spin')
+      setFrontAnimation('front-pop-spin-big')
     } else if (animationPhase === 1) {
       setBackAnimation('back-pop-spin')
     } else if (animationPhase === 2) {
@@ -31,7 +31,7 @@ function App() {
     } else if (animationPhase === 5) {
       setBottomAnimation('bottom-pop-spin')
     } else if (animationPhase === 6) {
-      setFrontAnimation('front-pop-spin-big')
+      setFrontAnimation('front-pop-spin')
     } else if (animationPhase === 7) {
       setBackAnimation('back-pop-spin-big')
     } else if (animationPhase === 8) {
