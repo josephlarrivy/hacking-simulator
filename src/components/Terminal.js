@@ -53,7 +53,7 @@ const Terminal = ({ level, setLevel, animate }) => {
       let numberOne = generateInt()
       let numberTwo = generateInt()
       return (`${numberOne} + ${numberTwo}`)
-    } else if (level <= 2) {
+    } else if (level > 1) {
       let numberOne = generateInt()
       let numberTwo = generateInt()
       let numberThree = generateInt()
