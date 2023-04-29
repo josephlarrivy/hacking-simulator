@@ -31,7 +31,7 @@ const Terminal = ({ level, setLevel, animate }) => {
     if (problems.length !== answers.length) {
       return
     } else if (evaluateMathExpression(problems[problems.length - 1]) == answers[answers.length - 1]) {
-      const responses = ['correct - but you\'ll never hack in!', 'correct - are you some kind on computer wiz', 'correct - but i eat hackers like you for breakfast']
+      const responses = ['correct - but you\'ll never hack in!', 'correct - are you some kind on computer wiz?', 'correct - but i eat hackers like you for breakfast?', 'correct answer']
       const randResp = Math.floor(Math.random() * responses.length)
       setRightOrWrong([...rightOrWrong, responses[randResp]])
       setProblems([...problems, generateNextProblem()])

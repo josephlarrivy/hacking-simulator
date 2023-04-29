@@ -6,6 +6,7 @@ import Terminal from './components/Terminal';
 
 function App() {
 
+  const [instructions, setInstructions] = useState('on')
   const [level, setLevel] = useState(1)
   const [animationPhase, setAnimationPhase] = useState(0)
 
@@ -15,6 +16,10 @@ function App() {
   const [rightAnimation, setRightAnimation] = useState('right-no-animation')
   const [topAnimation, setTopAnimation] = useState('top-no-animation')
   const [bottomAnimation, setBottomAnimation] = useState('bottom-no-animation')
+
+  const start = () => {
+    setInstructions('off')
+  }
 
   const animate = () => {
     setAnimationPhase(animationPhase+1)
@@ -50,6 +55,32 @@ function App() {
     }
   }
 
+  if (instructions === 'on') {
+    return (
+      <div className="App">
+        <div id='terminal-component-container'>
+         <div id='instructions-container'>
+          <div id='instructions-inner-container'>
+            <h1>Welcome</h1>
+            <h4>Our new operating system, CompuNinja, has gone rogue. It's your job to hack into the mainframe to save all of humanity. Hurry, time is runing out!</h4>
+            <button onClick={start} id='start-button'>Start Hacking</button>
+          </div>
+         </div>
+        </div>
+        <div id='cube-componenet-container'>
+          <Cube
+            level={level}
+            frontAnimation={frontAnimation}
+            backAnimation={backAnimation}
+            leftAnimation={leftAnimation}
+            rightAnimation={rightAnimation}
+            topAnimation={topAnimation}
+            bottomAnimation={bottomAnimation}
+          />
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="App">
