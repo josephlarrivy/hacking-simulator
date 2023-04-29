@@ -176,25 +176,16 @@
     bottom: 125px;
     transform: rotateX(90deg);
 }
-/* #top-pop {
-    bottom: 125px;
-    transform: rotateX(90deg) rotateY(360deg);
-} */
 #top-pop-spin {
     bottom: 180px;
     transform: rotateX(90deg) rotateY(360deg);
 }
 
 
-
 #bottom-no-animation {
     top: 125px;
     transform: rotateX(-90deg);
 }
-/* #bottom-pop {
-    top: 125px;
-    transform: rotateX(-90deg) rotateY(360deg);
-} */
 #bottom-pop-spin {
     top: 180px;
     transform: rotateX(-90deg) rotateY(360deg);

@@ -6,6 +6,7 @@ import Terminal from './components/Terminal';
 
 function App() {
 
+  const [level, setLevel] = useState(1)
   const [animationPhase, setAnimationPhase] = useState(0)
 
   const [frontAnimation, setFrontAnimation] = useState('front-no-animation')
@@ -38,9 +39,14 @@ function App() {
     } else if (animationPhase === 9) {
       setRightAnimation('right-pop-spin-big')
     } else if (animationPhase === 10) {
-      setTopAnimation('top-pop-spin-big')
-    } else if (animationPhase === 11) {
-      setBottomAnimation('bottom-pop-spin-big')
+      setFrontAnimation('front-no-animation')
+      setBackAnimation('back-no-animation')
+      setLeftAnimation('left-no-animation')
+      setRightAnimation('right-no-animation')
+      setTopAnimation('top-no-animation')
+      setBottomAnimation('bottom-no-animation')
+      setLevel(level+1)
+      setAnimationPhase(0)
     }
   }
 
@@ -48,10 +54,15 @@ function App() {
   return (
     <div className="App">
       <div id='terminal-component-container'>
-        <Terminal animate={animate}/>
+        <Terminal
+          level={level}
+          setLevel={setLevel}
+          animate={animate}
+        />
       </div>
       <div id='cube-componenet-container'>
         <Cube 
+          level={level}
           frontAnimation={frontAnimation}
           backAnimation={backAnimation}
           leftAnimation={leftAnimation}

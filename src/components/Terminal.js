@@ -3,7 +3,7 @@ import React from "react";
 import '../styles/Terminal.css'
 
 
-const Terminal = ({ animate }) => {
+const Terminal = ({ level, setLevel, animate }) => {
 
   
   return (
