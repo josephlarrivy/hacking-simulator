@@ -20,7 +20,7 @@
     margin-top: 15vh;
     margin-left: calc(50% - 125px);
     transform-style: preserve-3d;
-    animation:  animate 10s infinite;
+    animation:  animate 5s infinite;
 }
 
 @keyframes animate {
@@ -56,30 +56,146 @@
     transition: all 1s;
 }
 
-#front {
+#front-no-animation {
     transform: translateZ(125px);
 }
-
-#back {
-    transform: translateZ(-125px);
+#front-pop-spin {
+    transform: translateZ(180px) rotateY(360deg);
+}
+#front-pop-spin-big {
+    transform: translateZ(360px) rotateY(360deg);
+    animation: frontPopSpinBig;
+    animation-duration: 2s;
+}
+@keyframes frontPopSpinBig {
+    0% {
+        transform: translateZ(180px) rotateY(360deg);
+    }
+    50% {
+        transform: translateZ(360px) rotateY(360deg);
+    }
+    100% {
+        transform: translateZ(360px) rotateY(360deg) rotateZ(360deg);
+    }
 }
 
-#left {
+
+#back-no-animation {
+    transform: translateZ(-125px);
+}
+#back-pop-spin {
+    transform: translateZ(-180px) rotateY(360deg);
+}
+#back-pop-spin-big {
+    transform: translateZ(-360px) rotateY(360deg);
+    animation: backPopSpinBig;
+    animation-duration: 2s;
+}
+@keyframes backPopSpinBig {
+    0% {
+        transform: translateZ(-180px) rotateY(360deg);
+    }
+
+    50% {
+        transform: translateZ(-360px) rotateY(360deg);
+    }
+
+    100% {
+        transform: translateZ(-360px) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+
+
+#left-no-animation {
     right: 125px;
     transform: rotateY(-90deg);
 }
+#left-pop-spin {
+    right: 180px;
+    transform: rotateY(-90deg) rotateX(360deg);
+}
+#left-pop-spin-big {
+    right: 360px;
+    transform: rotateY(-90deg) rotateX(360deg);
+    animation: leftPopSpinBig;
+    animation-duration: 2s;
+}
+@keyframes leftPopSpinBig {
+    0% {
+        right: 180px;
+        transform: rotateY(-90deg) rotateX(360deg);
+    }
 
-#right {
+    50% {
+        right: 360px;
+        transform: rotateY(-90deg) rotateX(360deg);
+    }
+
+    100% {
+        right: 360px;
+        transform: rotateY(-90deg) rotateX(360deg) rotateZ(360deg);
+    }
+}
+
+
+#right-no-animation {
     left: 125px;
     transform: rotateY(90deg);
 }
+#right-pop-spin {
+    left: 180px;
+    transform: rotateY(90deg) rotateX(360deg);
+}
+#right-pop-spin-big {
+    left: 360px;
+    transform: rotateY(-90deg) rotateX(360deg);
+    animation: rightPopSpinBig;
+    animation-duration: 2s;
+}
+@keyframes rightPopSpinBig {
+    0% {
+        left: 180px;
+        transform: rotateY(90deg) rotateX(360deg);
+    }
 
-#top {
+    50% {
+        left: 360px;
+        transform: rotateY(90deg) rotateX(360deg);
+    }
+
+    100% {
+        left: 360px;
+        transform: rotateY(90deg) rotateX(360deg) rotateZ(360deg);
+    }
+}
+
+
+
+#top-no-animation {
     bottom: 125px;
     transform: rotateX(90deg);
 }
+/* #top-pop {
+    bottom: 125px;
+    transform: rotateX(90deg) rotateY(360deg);
+} */
+#top-pop-spin {
+    bottom: 180px;
+    transform: rotateX(90deg) rotateY(360deg);
+}
 
-#bottom {
+
+
+#bottom-no-animation {
     top: 125px;
     transform: rotateX(-90deg);
+}
+/* #bottom-pop {
+    top: 125px;
+    transform: rotateX(-90deg) rotateY(360deg);
+} */
+#bottom-pop-spin {
+    top: 180px;
+    transform: rotateX(-90deg) rotateY(360deg);
 }

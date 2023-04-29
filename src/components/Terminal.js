@@ -3,12 +3,12 @@ import React from "react";
 import '../styles/Terminal.css'
 
 
-const Terminal = ({animate}) => {
+const Terminal = ({ animate }) => {
 
   
   return (
     <div id="terminal-container">
-      <button onClick={animate}>Click</button>
+      <button onClick={animate}>CLICK</button>
     </div>
   )
 }
