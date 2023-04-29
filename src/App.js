@@ -1,23 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import Cube from './components/Cube';
+import Terminal from './components/Terminal';
 
 function App() {
+
+  const animate = () => {
+
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div id='terminal-component-container'>
+        <Terminal animate={animate}/>
+      </div>
+      <div id='cube-componenet-container'>
+        <Cube animate={animate}/>
+      </div>
     </div>
   );
 }
